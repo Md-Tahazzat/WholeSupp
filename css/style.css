@@ -61,9 +61,9 @@ body {
 
 body {
   text-rendering: optimizeSpeed;
-  font-size: var(--fs-body);
-  font-weight: var(--fw-regular);
-  line-height: var(--lh-default);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.2px;
   color: var(--clr-black);
 }
 
@@ -187,7 +187,7 @@ button {
 
 .btn {
   font-size: 20px;
-  font-weight: var(--fw-regular);
+  font-weight: 400;
   line-height: 20px;
   border-radius: 30px;
   padding: 20px 28px 18px 28px;
@@ -205,9 +205,9 @@ button {
 .btn-sm {
   padding: 10px 15px;
   border-radius: 20px;
-  font-size: var(--fs-x-small);
-  font-weight: var(--fw-regular);
-  line-height: var(--lh-medium);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22.4px;
   border: none;
 }
 
@@ -242,7 +242,8 @@ button {
   background-color: transparent;
 }
 
-/* Common styles */
+/* ---- Common styles ---- */
+
 .flex-container {
   height: 100%;
   width: 100%;
@@ -288,20 +289,19 @@ button {
   margin-bottom: min(24px, 2.4vw);
 }
 
-/* TODO: have to change this into fixed position */
-.tablet-view {
-  display: none;
-}
-
 .mobile-view {
   display: none;
 }
 
-/* Home page style starts */
+/* 
+=================================
+          Home page style starts 
+=================================*/
 
 /* 
 ===== desktop device from (1023px) style starts ====
 */
+
 .top-nav {
   background-color: var(--clr-black);
   display: flex;
@@ -350,6 +350,10 @@ button {
   text-decoration: none;
   color: var(--clr-black);
   text-transform: uppercase;
+}
+
+.nav-menu-close-btn {
+  display: none;
 }
 
 #nav-cart-container {
@@ -442,6 +446,7 @@ button {
 }
 
 /* ---- Ambassador reviews starts ----  */
+
 #home-client-reviews {
   background: linear-gradient(to bottom, #e7faed, #f4f1ea);
 }
@@ -548,7 +553,8 @@ button {
   line-height: 22.4px;
 }
 
-/* Home page product collection style starts */
+/* ---- product collection style starts ---- */
+
 #home-product-collections {
   padding-top: 59.24px;
   padding-bottom: 82.84px;
@@ -650,17 +656,21 @@ button {
   line-height: 30.8px;
   font-weight: 400;
 }
+
 .product-details .price-details {
   font-weight: 600;
 }
+
 .product-details .original-price {
   text-decoration: line-through;
   color: #bbbbbb;
 }
+
 .product-details p {
   font-size: 13px;
   line-height: 18.2px;
 }
+
 .product-detials .round-icons-container {
   display: flex;
   align-items: center;
@@ -670,7 +680,7 @@ button {
   display: inline-flex;
 }
 
-/* TODO: have make this style perfect */
+/*  TODO: have make this style perfect */
 .round-icons img {
   width: 12.23px;
   height: 12.23px;
@@ -678,7 +688,8 @@ button {
   border: 1px solid white;
 }
 
-/*  product advertise section style starts  */
+/*  --- product advertise starts ---- */
+
 #home-food-advertise {
   padding-block: 56.65px;
   background-color: var(--clr-secondary);
@@ -709,6 +720,7 @@ button {
   max-width: 506px;
   margin-bottom: 5px;
 }
+
 #home-food-advertise .checklist-container {
   margin-top: 10px;
 }
@@ -720,6 +732,7 @@ button {
   margin-top: 25px;
   margin-top: min(25px, 1.7vw);
 }
+
 #home-food-advertise .btn {
   margin: 0;
 }
@@ -992,7 +1005,7 @@ button {
 }
 
 /* --- product showcase starts --- */
-/* --- first showcase product starts --- */
+/* --- first showcase product --- */
 
 #first-showcase-product {
   padding-top: 82px;
@@ -1044,7 +1057,7 @@ button {
   margin-bottom: 15px;
 }
 
-/* ---- middle banner section style --- */
+/* ---- middle banner section starts --- */
 
 #middle-banner {
   display: flex;
@@ -1098,6 +1111,7 @@ button {
 }
 
 /* ----food gallery section styles ---- */
+
 #food-gallery {
   padding-top: 54.81px;
   padding-bottom: 13.49px;
@@ -1133,6 +1147,7 @@ button {
 }
 
 /* --- footer style starts --- */
+
 #footer {
   background-color: var(--clr-black);
   color: var(--clr-white);
@@ -1219,7 +1234,7 @@ button {
   text-decoration: none;
 }
 
-/* footer bottom */
+/* --- footer bottom --- */
 
 #footer .bottom {
   padding-top: 31px;
@@ -1261,24 +1276,49 @@ button {
   }
 
   #primary-nav-list {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     width: 100vw;
     height: 100%;
+    height: 100vh;
     height: 100svh;
     align-items: center;
     justify-content: center;
     background-color: var(--clr-black);
     transform: translateX(-100%);
+    transition: transform 0.3s;
     top: 0;
     left: 0;
     gap: 35px;
     gap: min(35px, 2vw);
   }
 
-  #primary-nav ul li a {
+  #primary-nav-list li {
+    width: 100%;
+    text-align: center;
+  }
+
+  #primary-nav-list li a {
+    color: rgb(192, 192, 192);
+    transition: 0.3s;
+  }
+
+  #primary-nav-list li a:hover {
     color: var(--clr-white);
+  }
+
+  .nav-menu-close-btn {
+    display: inline;
+    max-width: 30px;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+  }
+
+  .nav-menu-close-btn i {
+    color: var(--clr-white);
+    font-size: 25px;
   }
 
   /*  --- product comparison starts --- */
@@ -1295,96 +1335,8 @@ button {
     gap: 40px;
   }
 
-  /* 
-  .graph-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    gap: 16px;
-    border-radius: 40px;
-    padding: 4px;
-    min-width: 240px;
-    min-height: 544px;
-  }
+  /* ---  footer top ---  */
 
-  .graph-card.card-black {
-    background-color: var(--clr-black);
-    color: var(--clr-white);
-    border: 1px dotted white;
-  }
-
-  .graph-card.card-white {
-    background-color: var(--clr-white);
-  }
-
-  .graph-card div:first-child {
-    min-height: 68px;
-    background: rgba(143, 78, 78, 0.733);
-  }
-
-  #others-comapny-selector {
-    font-size: 16px;
-    line-height: 22.4px;
-    font-weight: 600px;
-    border-radius: 15px;
-    padding: 12px;
-    border: 1px solid black;
-  }
-
-  .graph-card-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    gap: 16px;
-    background: rgba(143, 78, 78, 0.733);
-  }
-
-  .graph-product-quality {
-    text-align: center;
-    position: relative;
-    min-height: 68px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .graph-product-quality img {
-    max-width: 30px;
-    max-height: 30px;
-    margin-inline: auto;
-  }
-
-  .graph-product-quality h5 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 18px;
-    line-height: 25.2px;
-    min-height: 25px;
-    background-color: black;
-    padding: 10px;
-    min-width: 192px;
-    min-width: min(192px, 13vw);
-    transform: translateX(-100%);
-    min-height: 68px;
-    border-radius: 15px 0px 0px 15px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .graph-product-quality h5.mobile-view {
-    display: none;
-  }
-
-  .graph-product-quality p {
-    font-size: 13px;
-    line-height: 18.2px;
-  } */
-
-  /* footer top */
   #footer .top {
     flex-wrap: wrap;
     gap: 30px;
@@ -1395,11 +1347,12 @@ button {
 }
 
 /* ========= mobile device upto (767px) style starts ======= */
+
 @media only screen and (max-width: 767px) {
   body {
     text-rendering: optimizeSpeed;
     font-size: 16px;
-    font-weight: var(--fw-regular);
+    font-weight: 400;
     line-height: 22.4px;
     color: var(--clr-black);
   }
@@ -1418,7 +1371,8 @@ button {
     line-height: 24px;
   }
 
-  /* utility classes  */
+  /* ---  utility classes ----  */
+
   .mobile-view {
     display: inline;
   }
@@ -1427,7 +1381,6 @@ button {
     display: inline;
   }
 
-  /* TODO : have to change this */
   .wrapper-container {
     padding-inline: max(20px, 5vw);
   }
@@ -1451,7 +1404,7 @@ button {
     line-height: 22.41px;
   }
 
-  /* Common styles  */
+  /* --- Common styles ---  */
 
   .flex-container {
     flex-direction: column;
@@ -1478,7 +1431,8 @@ button {
     display: none;
   }
 
-  /* general styles start */
+  /* ---- general styles start ---- */
+
   #navigation-container {
     width: 100%;
     padding-block: 21px;
@@ -1672,7 +1626,8 @@ button {
     line-height: 25.2px;
   }
 
-  /*  product advertise section style starts  */
+  /* ---- product advertise  starts ----  */
+
   #home-food-advertise {
     margin: 0;
     padding: 0;
@@ -1913,7 +1868,9 @@ button {
     display: inline;
   }
 
-  /* product showcase section styles */
+  /* ---- product showcase starts --- */
+  /* ---- first showcase product --- */
+
   #first-showcase-product {
     padding-top: 68px;
     padding-bottom: 0px;
@@ -1929,7 +1886,8 @@ button {
     border: 1px solid black;
   }
 
-  /* second showcase product style */
+  /* --- second showcase product --- */
+
   #second-showcase-product {
     padding-top: 68px;
     padding-bottom: 83px;
@@ -1946,7 +1904,8 @@ button {
     max-width: 100%;
   }
 
-  /* third showcase product section styles */
+  /* ---- third showcase product --- */
+
   #third-showcase-product {
     padding-block: 53px;
     border-bottom: 1px dotted rgb(134, 134, 134);
@@ -1969,7 +1928,8 @@ button {
     gap: 25px;
   }
 
-  /* food gallery section styles */
+  /* ---- food gallery starts ---- */
+
   #food-gallery {
     padding-top: 31px;
   }
@@ -2000,7 +1960,8 @@ button {
     max-height: 270px;
   }
 
-  /* footer style starts */
+  /* ---- footer style starts ---- */
+
   #footer {
     padding-bottom: 65px;
   }
