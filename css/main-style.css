@@ -748,6 +748,11 @@ button {
   gap: 10px;
 }
 
+.customer-review-thumnail .total-review {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
 .customer-review-details-container {
   display: flex;
   align-items: center;
@@ -987,6 +992,7 @@ button {
 }
 
 /* --- product showcase starts --- */
+/* --- first showcase product starts --- */
 
 #first-showcase-product {
   padding-top: 82px;
@@ -1001,7 +1007,8 @@ button {
   max-width: 530px;
 }
 
-/* second showcase product style */
+/* ---- second showcase product style ---- */
+
 #second-showcase-product {
   padding-top: 50px;
   padding-bottom: 100px;
@@ -1037,7 +1044,8 @@ button {
   margin-bottom: 15px;
 }
 
-/* middle banner section style */
+/* ---- middle banner section style --- */
+
 #middle-banner {
   display: flex;
   align-items: center;
@@ -1070,7 +1078,8 @@ button {
   max-width: 270px;
 }
 
-/* third showcase product section styles */
+/* --- third showcase product styles ---- */
+
 #third-showcase-product {
   padding-block: 50px;
   border-bottom: 1px dotted rgb(134, 134, 134);
@@ -1088,7 +1097,7 @@ button {
   width: 55%;
 }
 
-/* food gallery section styles */
+/* ----food gallery section styles ---- */
 #food-gallery {
   padding-top: 54.81px;
   padding-bottom: 13.49px;
@@ -1096,6 +1105,7 @@ button {
   margin-inline: 0px;
   overflow: hidden;
 }
+
 #food-gallery .title {
   font-size: min(50px, 3vw);
   line-height: min(55px, 3vw);
@@ -1110,18 +1120,19 @@ button {
 #food-gallery .btn {
   margin-top: 0px;
 }
-#food-gallery .gallery-container {
+
+.food-gallery-container {
   display: flex;
   gap: 10.38px;
   max-width: 100%;
   overflow-x: auto;
 }
-#food-gallery .gallery-img {
+.food-gallery-container img {
   max-width: 270px;
   max-height: 270px;
 }
 
-/* footer style starts */
+/* --- footer style starts --- */
 #footer {
   background-color: var(--clr-black);
   color: var(--clr-white);
@@ -1129,7 +1140,7 @@ button {
   padding-bottom: 49px;
 }
 
-/* footer top */
+/* --- footer top --- */
 #footer .top {
   display: flex;
   align-items: start;
@@ -1139,23 +1150,23 @@ button {
   width: 100%;
   border-bottom: 1px dotted white;
 }
-#footer .subscribe-container h4 {
+.footer-subscribe-container h4 {
   font-weight: 400;
   margin-bottom: 10px;
 }
-#footer .subscribe-container p {
+.footer-subscribe-container p {
   font-size: 16px;
   line-height: 22.4px;
   margin-bottom: 18px;
   padding-right: 15px;
 }
-#footer .mail-input-container {
+.footer-mail-input-container {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-#footer .mail-input {
+.footer-mail-input-container input {
   border-radius: 5px;
   padding: 20px 28px 18px 28px;
   font-size: 13px;
@@ -1165,7 +1176,7 @@ button {
   color: white;
 }
 
-#footer .mail-btn {
+.footer-mail-input-container button {
   margin: 0;
   border-radius: 5px;
   font-size: 13px;
@@ -1194,7 +1205,7 @@ button {
   font-weight: 700;
 }
 
-#footer .subscribe-container {
+.footer-subscribe-container {
   width: 50%;
   max-width: 420px;
 }
@@ -1378,7 +1389,7 @@ button {
     flex-wrap: wrap;
     gap: 30px;
   }
-  #footer .subscribe-container {
+  .footer-subscribe-container {
     min-width: 100%;
   }
 }
@@ -1728,6 +1739,14 @@ button {
     gap: 5px;
   }
 
+  .customer-review-thumnail {
+    flex-direction: column;
+    align-items: start;
+  }
+  .customer-review-thumnail img {
+    display: block;
+  }
+
   /* ---- super food review starts ---- */
 
   #home-superfood {
@@ -1969,7 +1988,8 @@ button {
     display: block;
     margin-inline: auto;
   }
-  #food-gallery .gallery-container {
+
+  .food-gallery-container {
     display: flex;
     gap: 10.38px;
     max-width: 100%;
@@ -1987,15 +2007,15 @@ button {
   #footer .top {
     gap: 53px;
   }
-  #footer .mail-input-container {
+  .footer-mail-input-container {
     flex-direction: column;
   }
 
-  #footer .mail-input {
+  .footer-mail-input-container input {
     width: 100%;
   }
 
-  #footer .mail-btn {
+  .footer-mail-input-container button {
     width: 100%;
   }
 
