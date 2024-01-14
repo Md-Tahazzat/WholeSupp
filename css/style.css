@@ -368,7 +368,7 @@ button {
 /* ------ banner  style starts -----*/
 
 #banner {
-  background-image: url("/images/banner-background.jpeg");
+  background-image: url("../images/banner-background.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -898,7 +898,7 @@ button {
 
 #product-comparison {
   padding-block: 50.85px;
-  background-image: url(/images/round-background.svg);
+  background-image: url("../images/round-background.svg");
   background-repeat: no-repeat;
   background-position: top right;
   background-color: #f4f1ea;
@@ -1065,7 +1065,7 @@ button {
   justify-content: center;
   padding-top: 134px;
   padding-bottom: 158px;
-  background-image: url("/images/middle-banner-sky-bg.png");
+  background-image: url("../images/middle-banner-sky-bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1478,7 +1478,7 @@ button {
   /* ---- banner style starts --- */
 
   #banner {
-    background-image: url("/images/small-banner-bg.jpg");
+    background-image: url("../images/small-banner-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
