@@ -168,6 +168,12 @@ button {
   justify-content: space-between;
 }
 
+.flex-end-center {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
 .wrapper-container {
   width: 100%;
   padding-inline: min(3vw, 50px);
@@ -870,7 +876,8 @@ button {
   display: none;
 }
 
-/* company product comparison section styles */
+/* ---- company product comparison starts ---- */
+
 #product-comparison {
   padding-block: 50.85px;
   background-image: url(/images/round-background.svg);
@@ -879,68 +886,108 @@ button {
   background-color: #f4f1ea;
 }
 
-#product-comparison .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 #product-comparison .title {
+  font-size: min(50px, 3vw);
+  line-height: min(55px, 3vw);
   margin-bottom: 15px;
 }
 
-#product-comparison .caption {
-  margin-bottom: 45px;
-  max-width: 408px;
+#product-comparison .description-container {
+  max-width: 528px;
+  max-width: min(528px, 30vw);
+  padding-block: 10px;
 }
 
-#product-comparison {
-}
-
-#product-comparison .company-selector {
-  font-size: 16px;
-  line-height: 22.4px;
-  font-weight: 600px;
-  border-radius: 15px;
-  padding: 19px 12px;
-  border: 1px solid black;
-}
-
-#product-comparison .comparison-graph {
-  display: flex;
-  align-items: start;
-}
-
-#product-comparison .graph-card {
+.graph-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   gap: 16px;
   border-radius: 40px;
-  padding: 21px;
+  border-radius: min(40px, 3vw);
+  padding: 4px 10px;
   min-width: 240px;
+  min-width: min(240px, 22vw);
+  min-height: 544px;
 }
 
-#product-comparison .card-black {
+.graph-card.card-black {
   background-color: var(--clr-black);
   color: var(--clr-white);
   border: 1px dotted white;
 }
 
-#product-comparison .card-white {
+.graph-card.card-white {
   background-color: var(--clr-white);
 }
 
-#product-comparison {
-}
-#product-comparison {
-}
-#product-comparison {
-}
-#product-comparison {
+.graph-card div:first-child {
+  min-height: 68px;
 }
 
-/* product showcase section styles */
+#others-comapny-selector {
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 600px;
+  border-radius: 15px;
+  padding: 12px;
+  border: 1px solid black;
+}
+
+.graph-card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 16px;
+}
+
+.graph-product-quality {
+  text-align: center;
+  position: relative;
+  min-height: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.graph-product-quality img {
+  max-width: 30px;
+  max-height: 30px;
+  margin-inline: auto;
+}
+
+.graph-product-quality h5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  line-height: 25.2px;
+  min-height: 25px;
+  background-color: black;
+  padding: 10px;
+  min-width: 192px;
+  min-width: min(192px, 17vw);
+  transform: translateX(-100%);
+  min-height: 68px;
+  border-radius: 15px 0px 0px 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph-product-quality h5.mobile-view {
+  display: none;
+}
+
+.graph-product-quality p {
+  font-size: 13px;
+  line-height: 18.2px;
+}
+
+/* --- product showcase starts --- */
+
 #first-showcase-product {
   padding-top: 82px;
   padding-bottom: 50px;
@@ -1222,6 +1269,109 @@ button {
   #primary-nav ul li a {
     color: var(--clr-white);
   }
+
+  /*  --- product comparison starts --- */
+
+  #product-comparison {
+    background-image: none;
+  }
+
+  #product-comparison .flex-container {
+    align-items: center;
+  }
+
+  #product-comparison .description-container {
+    gap: 40px;
+  }
+
+  /* 
+  .graph-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 16px;
+    border-radius: 40px;
+    padding: 4px;
+    min-width: 240px;
+    min-height: 544px;
+  }
+
+  .graph-card.card-black {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    border: 1px dotted white;
+  }
+
+  .graph-card.card-white {
+    background-color: var(--clr-white);
+  }
+
+  .graph-card div:first-child {
+    min-height: 68px;
+    background: rgba(143, 78, 78, 0.733);
+  }
+
+  #others-comapny-selector {
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: 600px;
+    border-radius: 15px;
+    padding: 12px;
+    border: 1px solid black;
+  }
+
+  .graph-card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 16px;
+    background: rgba(143, 78, 78, 0.733);
+  }
+
+  .graph-product-quality {
+    text-align: center;
+    position: relative;
+    min-height: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .graph-product-quality img {
+    max-width: 30px;
+    max-height: 30px;
+    margin-inline: auto;
+  }
+
+  .graph-product-quality h5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    line-height: 25.2px;
+    min-height: 25px;
+    background-color: black;
+    padding: 10px;
+    min-width: 192px;
+    min-width: min(192px, 13vw);
+    transform: translateX(-100%);
+    min-height: 68px;
+    border-radius: 15px 0px 0px 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .graph-product-quality h5.mobile-view {
+    display: none;
+  }
+
+  .graph-product-quality p {
+    font-size: 13px;
+    line-height: 18.2px;
+  } */
 
   /* footer top */
   #footer .top {
@@ -1635,74 +1785,113 @@ button {
     display: inline;
   }
 
-  /* * company product comparison section styles */
-  */ #product-comparison {
-    padding-block: 50.85px;
-    background-image: url(/images/round-background.svg);
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-color: #f4f1ea;
-  }
+  /* --- company product comparison starts --- */
 
-  #product-comparison .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  #product-comparison .flex-container {
+    flex-direction: column;
+    gap: 38px;
+    width: 100%;
   }
 
   #product-comparison .title {
-    margin-bottom: 15px;
+    font-size: max(32px, 3vw);
+    line-height: max(41px, 3vw);
+    margin-bottom: 26px;
   }
 
-  #product-comparison .caption {
-    margin-bottom: 45px;
-    max-width: 408px;
+  #product-comparison .description-container {
+    max-width: 100%;
+    flex-direction: column-reverse;
+    gap: 28px;
   }
 
-  #product-comparison {
+  #product-comparison .bottom {
+    max-width: 480px;
+    margin-inline: auto;
   }
 
-  #product-comparison .company-selector {
-    font-size: 16px;
-    line-height: 22.4px;
-    font-weight: 600px;
-    border-radius: 15px;
-    padding: 19px 12px;
-    border: 1px solid black;
-  }
-
-  #product-comparison .comparison-graph {
-    display: flex;
+  #product-comparison .img-container {
     align-items: start;
+    width: 100%;
+    min-width: 100%;
+    margin-inline: auto;
+    justify-content: center;
   }
 
-  #product-comparison .graph-card {
+  .graph-card {
+    border-radius: 20px;
+    padding: 40px 3px;
+    width: 50%;
+    max-width: 240px;
+    min-height: 544px;
+  }
+
+  .graph-card div:first-child {
+    min-height: 75px;
+  }
+
+  #others-comapny-selector {
+    font-size: 14px;
+    font-size: clamp(14px, 2vw, 18px);
+    border-radius: 8px;
+    padding-block: 12px;
+    width: 100%;
+    margin-inline: 2vw;
+  }
+
+  .graph-card-inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 16px;
-    border-radius: 40px;
-    padding: 21px;
-    min-width: 240px;
+    height: 100%;
+    gap: 0px;
+    width: 100%;
   }
 
-  #product-comparison .card-black {
-    background-color: var(--clr-black);
-    color: var(--clr-white);
-    border: 1px dotted white;
+  .graph-card-inner .horizontal-border {
+    width: 70%;
+    height: 0;
+    display: block;
+    margin-inline: auto;
+    margin-block: 16px;
+    border-top: 1px dotted white;
   }
 
-  #product-comparison .card-white {
-    background-color: var(--clr-white);
+  .graph-card.card-white .horizontal-border {
+    border-top: 1px dotted black;
   }
 
-  #product-comparison {
+  .graph-product-quality {
+    gap: 0;
+    height: 118px;
+    padding: 5px;
+    justify-content: start;
   }
-  #product-comparison {
+
+  .graph-product-quality img {
+    margin-bottom: 10px;
   }
-  #product-comparison {
+
+  .graph-product-quality:nth-child(3) {
+    height: 100px;
   }
-  #product-comparison {
+
+  .graph-product-quality h5 {
+    position: inherit;
+    font-size: 16px;
+    line-height: 22.4px;
+    min-height: 0;
+    background-color: transparent;
+    padding: 0;
+    min-width: 0;
+    transform: translateX(0);
+    min-height: 0;
+    border-radius: 0;
+    display: inherit;
+  }
+
+  .graph-product-quality h5.mobile-view {
+    display: inline;
   }
 
   /* product showcase section styles */
