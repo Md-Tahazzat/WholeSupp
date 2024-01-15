@@ -1,4 +1,23 @@
-/* global variables */
+@font-face {
+  font-family: Ambit;
+  src: url("../fonts/Ambit-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Ambit;
+  src: url("../fonts/Ambit-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Ambit;
+  src: url("../fonts/Ambit-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ---- global variables ---- */
 :root {
   --clr-primary: #77fbb9;
   --clr-primary-hover: #58ffab;
@@ -9,30 +28,7 @@
   --clr-black: #000000;
   --clr-white: #ffffff;
 
-  --ff-primary: roboto;
-  --ff-secondary: var(--ff-primary);
-
-  --fs-x-large: 50px;
-  --fs-large: 32px;
-  --fs-medium: 22px;
-  --fs-small: 20px;
-  --fs-x-small: 16px;
-  --fs-xx-small: 13px;
-  --fs-body: 18px;
-
-  --fw-light: 300;
-  --fw-regular: 400;
-  --fw-semibold: 600;
-  --fw-bold: 700;
-
-  --lh-compact: 18.2px;
-  --lh-medium: 22.4px;
-  --lh-default: 25.2px;
-  --lh-wide: 2;
-  --lh-extra-wide: 2.5;
-  --lh-xx-wide: 41.6px;
-  --lh-huge: 55px;
-  --lh-massive: 4.5;
+  --ff-primary: Ambit, sans-serif;
 }
 
 /*  reset styles starts */
@@ -65,6 +61,7 @@ body {
   font-weight: 400;
   line-height: 25.2px;
   color: var(--clr-black);
+  font-family: var(--ff-primary);
 }
 
 a:not([class]) {
@@ -1033,6 +1030,73 @@ button {
   width: 47%;
   max-width: 530px;
 }
+#second-showcase-product .img-container {
+  position: relative;
+}
+
+.product-elements-info {
+  position: absolute;
+  top: 39.77px;
+  top: min(39.77px, 2.5vw);
+  right: 23.28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16.62px;
+  width: auto;
+}
+
+.product-elements-info img {
+  width: 75px;
+  width: min(75px, 5vw);
+  height: 75px;
+  height: min(75px, 5vw);
+}
+
+.product-available-flavours.desktop-view {
+  position: absolute;
+  bottom: 28px;
+  bottom: min(28px, 3vw);
+  left: 28px;
+  left: min(28px, 3vw);
+  right: 28px;
+  right: min(28px, 3vw);
+  background: var(--clr-white);
+  border-radius: 12px;
+  padding: 15px 20px;
+  padding: min(15px, 1vw) min(20px, 1vw);
+}
+
+.product-available-flavours p:first-child {
+  font-size: 16px;
+  line-height: 22.4px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.product-flavours-details {
+  padding-block: 15px;
+  border-block: 1px dotted black;
+}
+
+.product-flavours-details p {
+  font-size: 13px;
+  line-height: 18.2px;
+  font-weight: 600;
+}
+
+.product-flavours-details .wrapping-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-flavours-details div {
+  gap: 9.31px;
+  width: 33%;
+}
+
+.product-flavours-details div:nth-child(2) {
+  border-inline: 1px dotted black;
+}
 
 #second-showcase-product .cta-icons {
   display: flex;
@@ -1333,6 +1397,36 @@ button {
 
   #product-comparison .description-container {
     gap: 40px;
+  }
+
+  /* --- second showcase product --- */
+
+  .product-available-flavours.desktop-view {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+
+  .product-available-flavours p:first-child {
+    font-size: 13px;
+    line-height: 18.2px;
+    margin-bottom: 8px;
+  }
+
+  .product-flavours-details {
+    padding-block: 8px;
+  }
+
+  .product-flavours-details p {
+    font-size: 10px;
+    line-height: 14.2px;
+  }
+
+  .product-flavours-details img {
+    width: 20px;
+    height: 20px;
   }
 
   /* ---  footer top ---  */
@@ -1882,6 +1976,47 @@ button {
     width: 100%;
     max-width: 100%;
   }
+
+  .product-available-flavours.desktop-view {
+    display: none;
+  }
+
+  .product-available-flavours > p:first-child {
+    margin-bottom: 15px;
+  }
+
+  .product-available-flavours {
+    margin-top: 53.84px;
+    display: block;
+  }
+
+  .product-flavours-details {
+    padding-block: 15px;
+  }
+
+  .product-flavours-details div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-flavours-details div:nth-child(2) {
+    border: none;
+    width: auto;
+  }
+
+  .product-flavours-details .wrapping-text {
+    flex-direction: row;
+  }
+
+  #first-showcase-product .img-container {
+    width: 100%;
+  }
+
+  #first-showcase-product-img {
+    min-height: 350px;
+    width: 100%;
+  }
+
   #first-showcase-product .btn {
     border: 1px solid black;
   }
@@ -1903,6 +2038,35 @@ button {
     width: 100%;
     max-width: 100%;
   }
+
+  #second-showcase-product .img-container {
+    width: 100%;
+  }
+
+  #second-showcase-product-img {
+    min-height: 350px;
+    width: 100%;
+  }
+
+  .product-elements-info {
+    top: 44.72px;
+    top: max(44.72px, 4vw);
+    right: 22.28px;
+    gap: 12.62px;
+  }
+
+  .product-elements-info img {
+    width: 56px;
+    width: max(56px, 5vw);
+    height: 56px;
+    height: max(56px, 5vw);
+  }
+
+  .product-available-flavours.mobile-view {
+    position: inherit;
+  }
+
+  /* left */
 
   /* ---- third showcase product --- */
 
@@ -1987,3 +2151,5 @@ button {
     gap: 53px;
   }
 }
+
+/*  ========= Home page ends ======== */
