@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="/fav-icon/favicon.svg">
-    <link rel="icon" type="image/png" href="/fav-icon/favicon.png">
+    <!-- <link rel="icon" type="image/svg+xml" href="./fav-icon/favicon.svg"> -->
+    <link rel="icon" type="image/png" href="./fav-icon/favicon.png">
     <title>WholeSupp</title>
 
     <!-- fontawesome CDN -->
@@ -24,10 +24,29 @@
             <p>
                 Free shipping on all orders over £<span>55</span>+
             </p>
-            <select name="" id="" class="country-selector desktop-view">
-                <option><img width="16" height="12" src="./images/flag.png" alt="country flag"> <span>UK</span></option>
-                <option><img width="16" height="12" src="./images/flag.png" alt="country flag"> <span>US</span></option>
-            </select>
+            <div class="country-selector-container desktop-view">
+                <ul id="nav-country-selector" role="list" class="flex-align-center">
+                    <li id="contry-value-reveiver" class=" nav-country-option">
+                        <img src="./images/flag.png" alt="country flag"> <span>UK</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-angle-down arrow-icon"></i>
+                    </li>
+                </ul>
+                <ul class="country-options-container" role="list">
+                    <li class="nav-country-option">
+                        <img src="./images/flag.png" alt="country flag"> <span>UK</span>
+                    </li>
+                    <li class="nav-country-option">
+                        <img src="./images/flag.png" alt="country flag"> <span>US</span>
+                    </li>
+                    <li class="nav-country-option">
+                        <img src="./images/flag.png" alt="country flag"> <span>CA</span>
+                    </li>
+
+                    <!-- add other country as needed -->
+                </ul>
+            </div>
         </div>
 
         <div id="navigation-container" class="flex-between-center">
@@ -85,7 +104,6 @@
                     </p>
                     <button class="btn btn-primary">SHOP NOW</button>
                     <div class="banner-captions desktop-view">
-                        <!-- TODO: have to add the marker icons -->
                         <button><i class="fa-solid fa-check"></i> Feel full for longer</button>
                         <button><i class="fa-solid fa-check"></i> Recover quicker</button>
                         <button><i class="fa-solid fa-check"></i> Reduce inflammation</button>
@@ -572,8 +590,7 @@
                         </div>
                         <div class="customer-review-user-info">
                             <h6>Adam Colman - London</h6>
-                            <!-- TODO: have to change this icon -->
-                            <p><span>have to change this</span>Verified Customer</p>
+                            <img src="./images/verified-customer.png" alt="verified customer tag">
                         </div>
                     </div>
                     <!-- single review card -->
@@ -612,8 +629,7 @@
                         </div>
                         <div class="customer-review-user-info">
                             <h6>Adam Colman - London</h6>
-                            <!-- TODO: have to change this icon -->
-                            <p><span>have to change this</span>Verified Customer</p>
+                            <img src="./images/verified-customer.png" alt="verified customer tag">
                         </div>
                     </div>
                     <!-- single review card -->
@@ -652,8 +668,7 @@
                         </div>
                         <div class="customer-review-user-info">
                             <h6>Adam Colman - London</h6>
-                            <!-- TODO: have to change this icon -->
-                            <p><span>have to change this</span>Verified Customer</p>
+                            <img src="./images/verified-customer.png" alt="verified customer tag">
                         </div>
                     </div>
                     <!-- single review card -->
@@ -692,8 +707,7 @@
                         </div>
                         <div class="customer-review-user-info">
                             <h6>Adam Colman - London</h6>
-                            <!-- TODO: have to change this icon -->
-                            <p><span>have to change this</span>Verified Customer</p>
+                            <img src="./images/verified-customer.png" alt="verified customer tag">
                         </div>
                     </div>
                     <!-- single review card -->
@@ -732,8 +746,7 @@
                         </div>
                         <div class="customer-review-user-info">
                             <h6>Adam Colman - London</h6>
-                            <!-- TODO: have to change this icon -->
-                            <p><span>have to change this</span>Verified Customer</p>
+                            <img src="./images/verified-customer.png" alt="verified customer tag">
                         </div>
                     </div>
                 </div>
@@ -950,7 +963,7 @@
                 </div>
                 <div class="description-container">
                     <div class="top">
-                        <h2 class="title">Led by science from <br> farm to formulation</h2>
+                        <h2 class="title"><span>Led by science from </span> <span>farm to formulation</span></h2>
                         <p class="desc">Science doesn’t mess around. And neither do we. We work with leading experts in
                             the fields of nutrition, science, medicine, and wellness so you can fuel good to feel great
                             — daily.</p>
@@ -1030,7 +1043,6 @@
                 <div class="img-container">
                     <img id="second-showcase-product-img" class="product-img" src="./images/rheal-bag.png"
                         alt="product showcase img">
-                    <!-- TODO: have to add more info -->
 
                     <div class="product-elements-info">
                         <img src="./images/calories.png" alt="product element">

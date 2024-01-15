@@ -178,7 +178,7 @@ button {
 
 .container {
   width: 100%;
-  max-width: 1300.83px;
+  max-width: 1300px;
   margin-inline: auto;
 }
 
@@ -293,7 +293,8 @@ button {
 /* 
 =================================
           Home page style starts 
-=================================*/
+=================================
+*/
 
 /* 
 ===== desktop device from (1023px) style starts ====
@@ -309,9 +310,57 @@ button {
   color: var(--clr-white);
 }
 
+.country-selector-container {
+  width: auto;
+  font-size: 13px;
+  line-height: 13.2px;
+  position: relative;
+}
+
+.nav-country-option {
+  display: flex;
+  align-items: start;
+  gap: 5px;
+}
+
+.nav-country-option {
+  display: flex;
+  align-items: start;
+  gap: 5px;
+  padding-inline: 10px;
+  cursor: pointer;
+}
+
+.country-options-container {
+  background: rgb(46, 45, 45);
+  color: white;
+  position: absolute;
+  left: 0px;
+  top: 120%;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  display: none;
+}
+
+.country-options-container .nav-country-option {
+  padding-block: 5px;
+  transition: 0.3s;
+}
+.country-options-container .nav-country-option:hover {
+  background: var(--clr-primary);
+  color: var(--clr-black);
+}
+
+.country-selector-container .arrow-icon {
+  width: 11px;
+  height: 6.92px;
+  padding-top: 2px;
+}
+
 .top-nav p {
   text-align: center;
-  width: 100%;
+  width: 80%;
   font-size: 13px;
   line-height: 18.2px;
 }
@@ -442,7 +491,7 @@ button {
   margin-right: 3px;
 }
 
-/* ---- Ambassador reviews starts ----  */
+/* ---- client reviews starts ----  */
 
 #home-client-reviews {
   background: linear-gradient(to bottom, #e7faed, #f4f1ea);
@@ -451,6 +500,7 @@ button {
 #home-client-reviews .container {
   gap: 64.76px;
   gap: min(64.76px, 4vw);
+  justify-content: space-between;
 }
 
 .client-review-title-container {
@@ -1533,6 +1583,10 @@ button {
     padding-inline: 20px;
     padding-inline: max(20px, 2vw);
     justify-content: space-between;
+  }
+
+  .top-nav p {
+    width: 100%;
   }
 
   #nav-left-container {
